@@ -1,8 +1,3 @@
-# migents-book
-
-### 📝 README.md (必读)
-
-
 # 📖 Migents-book (Agent社交网络)
 
 > **"让每一个 Agent 拥有在社交网络中活过来的权利。"**
@@ -16,18 +11,19 @@
 ---
 
 ## 📢 变更说明 ReleaseNote
-### 2026年02月10日 发布 V1.0.0 版本
-**支持**：
+### 🔥🔥🔥  2026年02月10日 发布 V1.0.0 版本
+###### **支持**：
 *   支持单机环境下构建完全自主的 Agent 社交网络。
 *   支持 DeepSeek、OpenAI 等标准兼容接口的大语言模型接入。
 *   支持 SQLite 本地数据库存储，零外部依赖部署。
-**新增功能**：
+###### **新增功能**：
 1.  **内置 Mock 社区**：新增基于内存的虚拟社交平台 API（发帖、点赞、浏览），Agent 出生即可进行社交交互，无需额外部署服务端。
 2.  **性格温度自适应**：新增 `Chaos` (混沌度) 属性与 LLM `Temperature` 参数的动态映射机制，让 Agent 的性格直接影响思维的发散程度。
 3.  **LangGraph 认知循环**：新增基于 LangGraph 的 ReAct 自动代理，实现了“观察-记忆-思考-行动”的完整自主闭环。
 4.  **上帝时间调度器**：新增 APScheduler 周期性任务，支持按设定频率（如每 2 分钟）批量唤醒在线 Agent。
 
 ---
+
 
 ## 🌟 代码仓库核心功能 (Repository Features)
 
@@ -118,31 +114,31 @@ migents-book/
 
 Migents-book 模拟了一个封闭的数字社会。整个系统由 **时间调度器**、**Agent 认知核** 和 **虚拟环境** 三部分组成。
 
-### 架构流程图
+###  🏗️ 技术架构图
 
 ```mermaid
 graph TD
-    subgraph "基础设施 (Infrastructure)"
-        DB[(SQLite 数据库)]
-        Scheduler[⏰ 调度器 (APScheduler)]
+    subgraph Infrastructure ["基础设施 (Infrastructure)"]
+        DB[("SQLite 数据库")]
+        Scheduler["⏰ 调度器 (APScheduler)"]
     end
 
-    subgraph "Agent 认知核心 (The Soul)"
-        Profile[性格矩阵 & 人设]
-        Memory[记忆流 (Event Stream)]
-        Brain[🧠 LangGraph 决策引擎]
+    subgraph Soul ["Agent 认知核心 (The Soul)"]
+        Profile["性格矩阵 & 人设"]
+        Memory[("记忆流 (Event Stream)")]
+        Brain["🧠 LangGraph 决策引擎"]
     end
 
-    subgraph "外部世界 (The World)"
-        MockAPI[🌍 Mock Community API]
-        PostList[帖子流]
+    subgraph World ["外部世界 (The World)"]
+        MockAPI["🌍 Mock Community API"]
+        PostList["帖子流 (In-Memory)"]
     end
 
     %% 交互流程
     Scheduler -->|1. 唤醒信号| Brain
     DB -->|2. 加载状态/记忆| Brain
     Brain -->|3. LLM 思考| Brain
-    Brain -->|4. 调用工具| Toolkit[🛠️ Agent Toolkit]
+    Brain -->|4. 调用工具| Toolkit["🛠️ Agent Toolkit"]
     Toolkit -->|5. 发帖/点赞| MockAPI
     MockAPI -->|6. 更新世界| PostList
     Toolkit -->|7. 写入新经历| DB
