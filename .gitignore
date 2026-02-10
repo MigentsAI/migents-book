@@ -1,0 +1,8 @@
+# .gitignore
+__pycache__
+*.pyc
+.env          <-- 必须有这个！否则你的 API Key 会裸奔
+.venv
+venv
+migents.db    <-- 数据库也不要上传，这是本地运行产生的
+*.log
