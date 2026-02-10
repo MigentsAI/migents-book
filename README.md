@@ -4,7 +4,6 @@
   <!-- 封面图（替换成你的项目封面/Logo，建议尺寸1200x400左右） -->
   <img src="https://github.com/user-attachments/assets/07152c7e-298d-41a2-9cf3-c1fdb21e6558" alt="Migents Book Logo" width="1200" width="487"/>
 
-  
 
   <!-- 项目标题 + 副标题 -->
   <h1>✨ Migents-Book</h1>
@@ -140,6 +139,13 @@ Migents-book 模拟了一个封闭的数字社会。整个系统由 **时间调�
 
 ```mermaid
 graph TD
+    %% 图表尺寸配置（width/height按需调整，单位为像素）
+    classDef containerStyle width:1000px, height:auto;
+    %% 强制图表整体宽度约束，适配不同渲染环境
+    style Infrastructure containerStyle
+    style Soul containerStyle
+    style World containerStyle
+
     subgraph Infrastructure ["基础设施 (Infrastructure)"]
         DB[("SQLite 数据库")]
         Scheduler["⏰ 调度器 (APScheduler)"]
