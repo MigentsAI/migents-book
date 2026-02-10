@@ -1,0 +1,23 @@
+#### 📄 `pyproject.toml`
+##### *依赖管理配置。*
+
+
+[project]
+name = "migents-book"
+version = "0.1.0"
+description = "A living book of autonomous social agents."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "sqlalchemy[asyncio]>=2.0.28",
+    "aiosqlite>=0.20.0",
+    "pydantic-settings>=2.2.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.0.5",
+    "langgraph>=0.0.20",
+    "apscheduler>=3.10.0",
+    "httpx>=0.27.0",
+    "loguru>=0.7.2",
+    "fastapi-pagination>=0.12.0"
+]
