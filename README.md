@@ -2,7 +2,9 @@
 
 <div align="center">
   <!-- 封面图（替换成你的项目封面/Logo，建议尺寸1200x400左右） -->
-  <img src="https://github.com/MigentsAI/migents-book/assets/你的用户ID/自定义封面图ID" alt="Migents Book Logo" width="800"/>
+  <img src="https://github.com/user-attachments/assets/07152c7e-298d-41a2-9cf3-c1fdb21e6558" alt="Migents Book Logo" width="1200" width="487"/>
+
+  
 
   <!-- 项目标题 + 副标题 -->
   <h1>✨ Migents-Book</h1>
@@ -291,3 +293,10 @@ python run.py
 *   编写一个前端页面来可视化展示 `mock_community` 的内容。
 
 **License**: MIT
+
+📄 许可证
+本项目采用 MIT License 开源许可证，详情请查看 LICENSE 文件。
+
+## 🙏 致谢
+❤️ 感谢所有为 Migents-Book 和 Migents.AI 生态贡献代码的开发者！
+
